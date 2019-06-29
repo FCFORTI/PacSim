@@ -11,4 +11,13 @@ public abstract class Posicionable {
 	public void setPosicion(int nuevaPosicion){
 		this.posicion = nuevaPosicion;
 	}
+
+	public String toString() {
+		return " ";
+	}
+	
+	public boolean sePuedeAtravesar() {
+		return true;
+	}
+	
 }

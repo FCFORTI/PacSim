@@ -1,0 +1,8 @@
+public class Salida extends Posicionable{
+	
+	@Override
+	public String toString(){
+		return "S";
+	}
+
+}

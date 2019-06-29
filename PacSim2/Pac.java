@@ -1,13 +1,15 @@
 public class Pac extends Posicionable{
 
 	private int vida, escudo, ejeX, ejeY, limiteDeColumnasDelTablero;
-	private boolean jugadorPerdio;
+	private boolean jugadorPerdio, ganador;
 	
 	public Pac(int posicion, int ejeX, int ejeY, int limiteDeColumnasDelTablero) {
 		setPosicion(posicion);
 		this.ejeX = ejeX;
 		this.ejeY = ejeY;
 		this.limiteDeColumnasDelTablero = limiteDeColumnasDelTablero;
+		this.ganador = false;
+		this.jugadorPerdio = false;
 	}
 	
 	public void moverArriba(){
@@ -82,5 +84,22 @@ public class Pac extends Posicionable{
 		return jugadorPerdio;
 	}
 	
+	@Override
+	public String toString(){
+		return "J";
+	}
+	
+	@Override
+	public boolean sePuedeAtravesar() {
+		return false;
+	}
+
+	public void setEsGanador(boolean b) {
+		this.ganador = true;		
+	}
+	
+	public boolean getGanador(){
+		return this.ganador;
+	}
 
 }

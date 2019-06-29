@@ -11,9 +11,20 @@ public class Tablero {
 		this.jugador = null;
 		for (int i = 0; i < tablero.length; i++) { 
 			for (int j = 0; j < tablero[i].length; j++) {
-				tablero[i][j] = null;
+				tablero[i][j] = new Vacio();
 			}
 		}
+	}
+	
+	public void mostrarEnConsola() {
+		System.out.println();
+		for (int i = 0; i < tablero.length; i++) {
+			for (int j = 0; j < tablero[i].length; j++) { 	
+				System.out.print(tablero[i][j] + " ");
+				if (j == tablero[i].length - 1) 
+					System.out.println();
+			}			
+		}		
 	}
 	
 	public void agregarPosicionable(Posicionable posicionableAAgregar, int posicion){
@@ -26,35 +37,51 @@ public class Tablero {
 	}
 	
 	public void moverJugadorArriba(){
-		if (jugador.getEjeX() - 1 > 0){
+		if ((jugador.getEjeX() - 1 >= 0) && !(tablero[jugador.getEjeX()][jugador.getEjeY()-1].sePuedeAtravesar())){
 			jugador.moverArriba();
 			tablero[jugador.getEjeX()][jugador.getEjeY()].efectuarSobre(jugador);
+			tablero[jugador.getEjeX()][jugador.getEjeY()] = this.jugador;
+			tablero[jugador.getEjeX() + 1][jugador.getEjeY()] = new Vacio();
 		}
 	}
 	
 	public void moverJugadorAbajo(){
-		if (jugador.getEjeX() + 1 <= limiteDeFilas){
+		if ((jugador.getEjeX() + 1 < limiteDeFilas) && !(tablero[jugador.getEjeX()][jugador.getEjeY()+1].sePuedeAtravesar())){
 			jugador.moverAbajo();
 			tablero[jugador.getEjeX()][jugador.getEjeY()].efectuarSobre(jugador);
+			tablero[jugador.getEjeX()][jugador.getEjeY()] = this.jugador;
+			tablero[jugador.getEjeX() - 1][jugador.getEjeY()] = new Vacio();
 		}
 	}
 	
-	public void moverJugadorDerechA(){
-		if (jugador.getEjeY() + 1 <= limiteDeColumnas){
+	public void moverJugadorDerecha(){
+		if ((jugador.getEjeY() + 1 < limiteDeColumnas) && !(tablero[jugador.getEjeX()][jugador.getEjeY()+1].sePuedeAtravesar())){
 			jugador.moverDerecha();
 			tablero[jugador.getEjeX()][jugador.getEjeY()].efectuarSobre(jugador);
+			tablero[jugador.getEjeX()][jugador.getEjeY()] = this.jugador;
+			tablero[jugador.getEjeX()][jugador.getEjeY() - 1] = new Vacio();
 		}
 	}
 	
 	public void moverJugadorIzquierda(){
-		if (jugador.getEjeY() - 1 > 0){
+		if ((jugador.getEjeY() - 1 >= 0) && !(tablero[jugador.getEjeX()][jugador.getEjeY()-1].sePuedeAtravesar())){
 			jugador.moverIzquierda();
 			tablero[jugador.getEjeX()][jugador.getEjeY()].efectuarSobre(jugador);
+			tablero[jugador.getEjeX()][jugador.getEjeY()] = this.jugador;
+			tablero[jugador.getEjeX()][jugador.getEjeY() + 1] = new Vacio();
 		}
 	}
 	
 	public boolean elJugadorPerdio(){
 		return jugador.isJugadorPerdio();
+	}
+	
+	public boolean hayGanador(){
+		return this.jugador.getGanador();
+	}
+	
+	public Pac getJugador(){
+		return this.jugador;
 	}
 	
 }

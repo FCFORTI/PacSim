@@ -1,4 +1,4 @@
-public abstract class Provision extends Posicionable{
+public abstract class Provision extends Posicionable implements Consumible{
 
 
 }

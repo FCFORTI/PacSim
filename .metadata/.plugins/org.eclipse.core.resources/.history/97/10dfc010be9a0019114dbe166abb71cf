@@ -1,0 +1,8 @@
+public class Pared extends Posicionable {
+
+	@Override
+	public String toString(){
+		return "X";
+	}
+	
+}
