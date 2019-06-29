@@ -1,0 +1,5 @@
+public class Posicion {
+	
+	private int posicion, ejeX, ejeY;
+	
+}

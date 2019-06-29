@@ -1,0 +1,10 @@
+public abstract class Posicionable {
+	
+	private int posicion;
+	
+	public void efectuarSobre(Pac jugador){}
+
+	public int getPosicion(){
+		return posicion;
+	}
+}

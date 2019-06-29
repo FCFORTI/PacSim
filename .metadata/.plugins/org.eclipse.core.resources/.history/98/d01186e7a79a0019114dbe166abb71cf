@@ -1,0 +1,21 @@
+public class Pac extends Posicionable{
+
+	private int vida, escudo;
+	
+	public void moverArriba(){}
+	
+	public void moverAbajo(){}
+	
+	public void moverDerecha(){}
+	
+	public void moverIzquierda(){}
+	
+	public void aumentarVida(){}
+	
+	public void disminuirVida(){}
+	
+	public void aumentarEscudo(){}
+	
+	public void disminuirEscudo(){}
+	
+}

@@ -1,0 +1,16 @@
+public abstract class Posicionable {
+	
+	private int posicion, ejeX, ejeY;
+	
+	public Posicionable(int posicion, int ejeX, int ejeY){
+		this.ejeX = ejeX;
+		this.ejeY = ejeY;
+		this.posicion = posicion;
+	}
+	
+	public void efectuarSobre(Pac jugador){}
+
+	public int getPosicion(){
+		return this.posicion;
+	}
+}

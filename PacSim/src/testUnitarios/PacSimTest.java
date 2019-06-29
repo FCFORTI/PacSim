@@ -56,7 +56,7 @@ public class PacSimTest {
 	@Test
 	public void siExplotaUnaMinaSeDescuentaVida(){
 		
-		pacSim.recibirDaño();
+		pacSim.recibirDaï¿½o();
 		
 		assertEquals(0, pacSim.getVida());
 		

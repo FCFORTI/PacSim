@@ -1,0 +1,49 @@
+public class Pac extends Posicionable{
+
+	private int ejeX, ejeY;
+	private Tablero tablero
+	
+	public Pac(int posicion, int ejeX, int ejeY, Tablero tablero) {
+		super(posicion);
+		this.ejeX = ejeX;
+		this.ejeY = ejeY;
+	}
+
+	private int vida, escudo;
+	
+	public void moverArriba(){
+		int posicion = (getPosicion();
+		setPosicion(posicion);
+	}
+	
+	public void moverAbajo(){}
+	
+	public void moverDerecha(){}
+	
+	public void moverIzquierda(){}
+	
+	public void aumentarVida(){}
+	
+	public void disminuirVida(){}
+	
+	public void aumentarEscudo(){}
+	
+	public void disminuirEscudo(){}
+	
+	public int getVida() {
+		return vida;
+	}
+
+	public void setVida(int vida) {
+		this.vida = vida;
+	}
+
+	public int getEscudo() {
+		return escudo;
+	}
+
+	public void setEscudo(int escudo) {
+		this.escudo = escudo;
+	}
+
+}

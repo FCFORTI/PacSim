@@ -1,0 +1,8 @@
+public class Mina extends Posicionable{
+
+	@Override
+	public void efectuarSobre(Pac jugador){
+		
+	}
+	
+}

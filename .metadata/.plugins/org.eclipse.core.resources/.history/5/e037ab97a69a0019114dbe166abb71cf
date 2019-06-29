@@ -1,0 +1,7 @@
+public class Pac extends Posicionable{
+
+	private int vida, escudo;
+	private boolean esGanador;
+	private Posicion posicionActual;
+	
+}

@@ -1,0 +1,16 @@
+public class Mina extends Posicionable{
+
+	public Mina(int posicion) {
+		super(posicion);
+	}
+
+	@Override
+	public void efectuarSobre(Pac jugador){
+		if (jugador.getEscudo() > 0){
+			jugador.disminuirEscudo();
+		} else {
+			jugador.disminuirVida();
+		}
+	}
+	
+}

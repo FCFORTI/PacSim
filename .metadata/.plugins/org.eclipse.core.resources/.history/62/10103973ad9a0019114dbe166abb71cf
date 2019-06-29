@@ -1,0 +1,19 @@
+public class Posicion {
+	
+	private int ejeX, ejeY;
+	
+	public Posicion(int ejeX, int ejeY){
+		this.ejeX = ejeX;
+		this.ejeY = ejeY;
+	}
+
+	public int getEjeX() {
+		return ejeX;
+	}
+
+	public int getEjeY() {
+		return ejeY;
+	}
+	
+	
+}

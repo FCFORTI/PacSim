@@ -16,7 +16,7 @@ public class Pac extends Casillero {
 		this.esGanador = false;
 	}
 	
-	public void recibirDaño() {
+	public void recibirDano() {
 		if (this.escudo > 0) {
 			this.escudo--;
 		} else {

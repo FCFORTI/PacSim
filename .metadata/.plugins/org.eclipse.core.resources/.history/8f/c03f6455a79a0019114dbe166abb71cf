@@ -1,0 +1,5 @@
+public abstract class Posicionable {
+	
+	public void efectuarSobre(Pac jugador){}
+
+}

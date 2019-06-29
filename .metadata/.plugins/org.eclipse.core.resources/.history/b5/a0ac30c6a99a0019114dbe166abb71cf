@@ -1,0 +1,7 @@
+import java.util.ArrayList;
+
+public class ConsumibleComposite extends Posicionable{
+
+	private ArrayList<Provision> provisiones = new ArrayList<Provision>();
+	
+}

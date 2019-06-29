@@ -1,0 +1,8 @@
+public class CajaDeVitaminas extends Posicionable{
+
+	@Override
+	public void efectuarSobre(Pac jugador){
+		jugador.aumentarVida();
+	}
+	
+}

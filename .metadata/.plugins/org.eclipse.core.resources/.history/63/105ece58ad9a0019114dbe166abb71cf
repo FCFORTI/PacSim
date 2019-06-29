@@ -1,0 +1,12 @@
+public class EscudoDeFuerza extends Posicionable{
+
+	public EscudoDeFuerza(int posicion) {
+		super(posicion);
+	}
+
+	@Override
+	public void efectuarSobre(Pac jugador){
+		jugador.aumentarEscudo();
+	}
+	
+}

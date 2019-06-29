@@ -1,0 +1,4 @@
+
+public class Pared extends Posicionable {
+
+}

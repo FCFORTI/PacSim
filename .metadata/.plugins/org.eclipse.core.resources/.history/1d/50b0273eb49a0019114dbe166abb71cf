@@ -1,0 +1,9 @@
+public class Tablero {
+
+	private Posicionable[][] tablero;
+	private int limiteDeFilas, limiteDeColumnas;
+	private Pac jugador;
+	
+	
+	
+}

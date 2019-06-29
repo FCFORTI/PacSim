@@ -1,0 +1,44 @@
+public class Tablero {
+
+	private Posicionable[][] tablero;
+	private int limiteDeFilas, limiteDeColumnas;
+	private Pac jugador;
+	
+	public Tablero(int cantidadDeFilas, int cantidadDeColumnas){
+		this.tablero = new Posicionable[cantidadDeFilas][cantidadDeColumnas];
+		this.limiteDeFilas = cantidadDeFilas;
+		this.limiteDeColumnas = cantidadDeColumnas;
+		this.jugador = null;
+		for (int i = 0; i < tablero.length; i++) { 
+			for (int j = 0; j < tablero[i].length; j++) {
+				tablero[i][j] = null;
+			}
+		}
+	}
+	
+	public void agregarPosicionable(Posicionable posicionableAAgregar, int posicion){
+		tablero[posicion/limiteDeColumnas][posicion%limiteDeColumnas] = posicionableAAgregar;
+	}
+	
+	public void agregarPac(Pac jugador, int posicion){
+		this.jugador = jugador;
+		tablero[this.jugador.getEjeX()][this.jugador.getEjeY()] = jugador;
+	}
+	
+	public void moverJugadorArriba(){
+		if (jugador.getEjeX() - 1 > 0){
+			jugador.moverArriba();
+		}
+	}
+	
+	public void moverJugadorAbajo(){
+		if (jugador.getEjeX() + 1 < 0){
+			jugador.moverArriba();
+		}
+	}
+	
+	public void moverJugadorDerechA(){}
+	
+	public void moverJugadorIzquierda(){}
+	
+}

@@ -1,0 +1,9 @@
+public class Posicion {
+	
+	private int posicion, ejeX, ejeY;
+	
+	public Posicion(int posicion){
+		this.posicion = posicion;
+	}
+	
+}
